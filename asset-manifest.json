@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/practice-pokeapi/static/css/main.28406494.chunk.css",
+    "main.js": "/practice-pokeapi/static/js/main.d22fd2ae.chunk.js",
+    "main.js.map": "/practice-pokeapi/static/js/main.d22fd2ae.chunk.js.map",
+    "runtime~main.js": "/practice-pokeapi/static/js/runtime~main.5d42ae63.js",
+    "runtime~main.js.map": "/practice-pokeapi/static/js/runtime~main.5d42ae63.js.map",
+    "static/js/2.73b50835.chunk.js": "/practice-pokeapi/static/js/2.73b50835.chunk.js",
+    "static/js/2.73b50835.chunk.js.map": "/practice-pokeapi/static/js/2.73b50835.chunk.js.map",
+    "index.html": "/practice-pokeapi/index.html",
+    "precache-manifest.529728a68d543eb3e326eabc5086de0d.js": "/practice-pokeapi/precache-manifest.529728a68d543eb3e326eabc5086de0d.js",
+    "service-worker.js": "/practice-pokeapi/service-worker.js",
+    "static/css/main.28406494.chunk.css.map": "/practice-pokeapi/static/css/main.28406494.chunk.css.map"
+  }
+}
