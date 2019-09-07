@@ -7,12 +7,8 @@ class Navbar extends React.Component {
     return(
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <Link className="navbar-brand" to="/">POKEAPI</Link>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <Link className="nav-link" to="/created_by">Created by</Link>
-            </li>
-          </ul>
+        <div className="d-flex align-items-center ml-auto">
+          <p className="text-white m-0">Created by Milton De León</p>
         </div>
       </nav>
     )

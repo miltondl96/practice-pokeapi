@@ -3,15 +3,21 @@ import axios from 'axios'
 import {withRouter} from 'react-router-dom'
 
 import Navbar from './Navbar'
+import Pagination from './Pagination'
 
 class PokemonList extends React.Component {
 
   state = {
-    pokemonList: []
+    pokemonList: [],
+    page: 1
   }
 
   componentDidMount(){
-    axios.get('https://pokeapi.co/api/v2/pokemon')
+    this.setCurrentPage(this.state.page);
+  }
+
+  setCurrentPage = (page) => {
+    axios.get(`https://pokeapi.co/api/v2/pokemon?offset=${page === 1 ? 0 : page*25}&limit=25`)
     .then(
       (result) => {
         this.setState({
@@ -22,38 +28,40 @@ class PokemonList extends React.Component {
   }
 
   setRow = (pokemon, i) => {
+    const {page} = this.state
+    const image = `https://pokeres.bastionbot.org/images/pokemon/${page===1 ? page+i : (page*25+i)+1}.png`
     return(
-      <tr key={i} onClick={() => this.props.history.push(`/pokemon/${pokemon.name}/detail`, {pokemon: pokemon.url})}>
-        <th scope="row">{i+1}</th>
-        <td>{pokemon.name}</td>
-        <td>{pokemon.url}</td>
-      </tr>
+      <div className="col-sm d-flex justify-content-around " key={i}>
+        <div className="text-white bg-dark mb-3 p-4 hover:shadow rounded hover" style={{"width": "18rem"}} onClick={() => this.props.history.push(`/pokemon/${pokemon.name}/detail`, {pokemon: pokemon.url, image})}>
+        <button className="bg-transparent border-0 text-white">
+          <img src={image} className="card-img-top" alt="" />
+          <div className="card-body">
+            <h2 className="card-title text-center text-capitalize">{pokemon.name}</h2>
+          </div>
+        </button>
+        </div>
+      </div>
     )
   }
   
+  paginate = pageNumber => {this.setState({page: pageNumber}, this.setCurrentPage(pageNumber))}
+
   render(){
     const { pokemonList } = this.state
     return(
       <>
         <Navbar />
-        <div className="container">
-          <h1 className="text-center mt-3 text-info">Pokemon List</h1>
-          <table className="table table-hover table-dark mb-5 mt-3">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">URL</th>
-              </tr>
-            </thead>
-            <tbody>
-              {
-                pokemonList.map((pokemon, i) => (
-                  this.setRow(pokemon, i)
-                ))
-              }
-            </tbody>
-          </table>
+        <div className="container-fluid px-5">
+          <div className="row pt-4">
+            {
+              pokemonList.map((pokemon, i) => (
+                this.setRow(pokemon, i)
+              ))
+            }
+          </div>
+            <Pagination 
+              paginate={this.paginate}
+            />
         </div>
       </>
     )
