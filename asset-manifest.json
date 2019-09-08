@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/practice-pokeapi/static/css/main.28406494.chunk.css",
-    "main.js": "/practice-pokeapi/static/js/main.d22fd2ae.chunk.js",
-    "main.js.map": "/practice-pokeapi/static/js/main.d22fd2ae.chunk.js.map",
+    "main.js": "/practice-pokeapi/static/js/main.366f13b4.chunk.js",
+    "main.js.map": "/practice-pokeapi/static/js/main.366f13b4.chunk.js.map",
     "runtime~main.js": "/practice-pokeapi/static/js/runtime~main.5d42ae63.js",
     "runtime~main.js.map": "/practice-pokeapi/static/js/runtime~main.5d42ae63.js.map",
-    "static/js/2.73b50835.chunk.js": "/practice-pokeapi/static/js/2.73b50835.chunk.js",
-    "static/js/2.73b50835.chunk.js.map": "/practice-pokeapi/static/js/2.73b50835.chunk.js.map",
+    "static/js/2.f5689c66.chunk.js": "/practice-pokeapi/static/js/2.f5689c66.chunk.js",
+    "static/js/2.f5689c66.chunk.js.map": "/practice-pokeapi/static/js/2.f5689c66.chunk.js.map",
     "index.html": "/practice-pokeapi/index.html",
-    "precache-manifest.529728a68d543eb3e326eabc5086de0d.js": "/practice-pokeapi/precache-manifest.529728a68d543eb3e326eabc5086de0d.js",
+    "precache-manifest.0b727a2c0b987ed9a31722f5f69febf3.js": "/practice-pokeapi/precache-manifest.0b727a2c0b987ed9a31722f5f69febf3.js",
     "service-worker.js": "/practice-pokeapi/service-worker.js",
     "static/css/main.28406494.chunk.css.map": "/practice-pokeapi/static/css/main.28406494.chunk.css.map"
   }
